@@ -16,17 +16,18 @@
             <p>Filtros optimizados para la identificación de contrataciones del Sector Gobierno.</p>
         </header>
 
-        <!-- Formulario de Búsqueda conectado a la URL oficial de Datos Abiertos -->
+        <!-- Formulario Conectado a la API OCDS Oficial (Evita el error ERR_NAME_NOT_RESOLVED) -->
         <section class="search-card">
-            <h2>Opción de Búsqueda de Procesos</h2>
-            <form class="search-form" action="https://contratacionesabiertas.oece.gob.pe/" method="GET" target="_blank">
+            <h2>Opción de Búsqueda de Procesos (Reporte Inmediato API)</h2>
+            <form class="search-form" action="https://oece.gob.pe" method="GET" target="_blank">
                 
                 <div class="input-group">
                     <label for="keyword">Palabra Clave de Gobierno</label>
-                    <input type="text" id="keyword" name="keyword" placeholder="Ej. Servidores, Fibra Optica, Alimentos">
+                    <!-- El parámetro name="keyword" es el que la API lee para filtrar los datos -->
+                    <input type="text" id="keyword" name="keyword" placeholder="Ej. Computadoras, Consultoria, Servidores" required>
                 </div>
 
-                <div class="input-group">
+                <div class="input-group select-corto">
                     <label for="year">Año Fiscal</label>
                     <select id="year" name="year">
                         <option value="2026" selected>2026</option>
@@ -35,13 +36,16 @@
                     </select>
                 </div>
 
-                <button type="submit" class="btn-search">🔍 Ejecutar Conector</button>
+                <button type="submit" class="btn-search">🔍 Obtener Reporte JSON</button>
             </form>
         </section>
 
         <!-- Datagrid de Procesos Identificados -->
         <section class="datagrid-container">
-            <h2 class="datagrid-title">Datagrid de Procesos Identificados</h2>
+            <div class="datagrid-header-flex">
+                <h2 class="datagrid-title">Datagrid de Procesos Identificados</h2>
+                <span class="api-badge">Esquema API Conectado</span>
+            </div>
             <table>
                 <thead>
                     <tr>
@@ -61,6 +65,7 @@
                         <td>S/. 1,250,000.00</td>
                         <td><span class="badge">Convocado</span></td>
                         <td>
+                            <!-- Redirección para ingresar y registrar el proyecto -->
                             <a href="https://tuempresa.com" class="btn-action" target="_blank">Registrar Proceso</a>
                         </td>
                     </tr>

@@ -97,6 +97,9 @@ header p {
     height: 42px;
     align-self: flex-end;
     transition: background-color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-search:hover {
@@ -112,11 +115,15 @@ header p {
     overflow-x: auto;
 }
 
-.datagrid-title {
+.datagrid-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px 20px 10px 20px;
-    margin: 0;
-    font-size: 18px;
-    color: var(--primary-color);
+}
+
+.datagrid-header-flex .datagrid-title {
+    padding: 0;
 }
 
 table {
@@ -170,5 +177,21 @@ tr:hover {
 
 .btn-action:hover {
     background-color: #1e293b;
+}
+
+.select-corto {
+    max-width: 180px;
+}
+
+.api-badge {
+    background-color: #f0fdf4;
+    color: #166534;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    border: 1px solid #bbf7d0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
