@@ -1,0 +1,174 @@
+/* --- VARIABLES Y CONFIGURACIÓN BASE --- */
+:root {
+    --primary-color: #0f172a;
+    --accent-color: #0284c7;
+    --accent-hover: #0369a1;
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #334155;
+    --border-color: #e2e8f0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
+    padding: 20px;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 15px;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 28px;
+}
+
+header p {
+    margin: 5px 0 0 0;
+    color: #64748b;
+}
+
+/* --- PANEL DE BÚSQUEDA --- */
+.search-card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    border: 1px solid var(--border-color);
+}
+
+.search-card h2 {
+    margin-top: 0;
+    font-size: 18px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.search-form {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.input-group {
+    flex: 1;
+    min-width: 250px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.input-group input, 
+.input-group select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 15px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.btn-search {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0 24px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 42px;
+    align-self: flex-end;
+    transition: background-color 0.2s;
+}
+
+.btn-search:hover {
+    background-color: var(--accent-hover);
+}
+
+/* --- DATAGRID (TABLA DE PROCESOS) --- */
+.datagrid-container {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+    overflow-x: auto;
+}
+
+.datagrid-title {
+    padding: 20px 20px 10px 20px;
+    margin: 0;
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background-color: #f1f5f9;
+    color: #475569;
+    padding: 12px 20px;
+    font-weight: 600;
+    border-bottom: 2px solid var(--border-color);
+}
+
+td {
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border-color);
+    color: #334155;
+}
+
+tr:hover {
+    background-color: #f8fafc;
+}
+
+.badge {
+    background-color: #dcfce7;
+    color: #15803d;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* --- REDIRECCIÓN Y ACCIONES --- */
+.btn-action {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 13px;
+    transition: background-color 0.2s;
+    text-align: center;
+}
+
+.btn-action:hover {
+    background-color: #1e293b;
+}
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Procesos del Gobierno - OSCE</title>
+    <!-- Vinculación exacta con tu archivo style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        
+        <header>
+            <h1>Plataforma de Consulta y Monitoreo Gob-Procesos</h1>
+            <p>Filtros optimizados para la identificación de contrataciones del Sector Gobierno.</p>
+        </header>
+
+        <!-- Formulario de Búsqueda conectado a la URL oficial de Datos Abiertos -->
+        <section class="search-card">
+            <h2>Opción de Búsqueda de Procesos</h2>
+            <form class="search-form" action="https://oece.gob.pe" method="GET" target="_blank">
+                
+                <div class="input-group">
+                    <label for="keyword">Palabra Clave de Gobierno</label>
+                    <input type="text" id="keyword" name="keyword" placeholder="Ej. Servidores, Fibra Optica, Alimentos">
+                </div>
+
+                <div class="input-group">
+                    <label for="year">Año Fiscal</label>
+                    <select id="year" name="year">
+                        <option value="2026" selected>2026</option>
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-search">🔍 Ejecutar Conector</button>
+            </form>
+        </section>
+
+        <!-- Datagrid de Procesos Identificados -->
+        <section class="datagrid-container">
+            <h2 class="datagrid-title">Datagrid de Procesos Identificados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código OCDS / Identificador</th>
+                        <th>Entidad Pública</th>
+                        <th>Objeto de Contratación (Proyecto)</th>
+                        <th>Monto Referencial</th>
+                        <th>Estado</th>
+                        <th>Acción requerida</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>ocds-04231-2026-1</strong></td>
+                        <td>Ministerio de Transportes y Comunicaciones</td>
+                        <td>Adquisición e Instalación de Firewall Perimetral de Alta Disponibilidad</td>
+                        <td>S/. 1,250,000.00</td>
+                        <td><span class="badge">Convocado</span></td>
+                        <td>
+                            <a href="https://tuempresa.com" class="btn-action" target="_blank">Registrar Proceso</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>ocds-04231-2026-2</strong></td>
+                        <td>Municipalidad Metropolitana de Lima</td>
+                        <td>Servicio de Consultoría para Desarrollo de Infraestructura vial masiva</td>
+                        <td>S/. 450,000.00</td>
+                        <td><span class="badge">Convocado</span></td>
+                        <td>
+                            <a href="https://tuempresa.com" class="btn-action" target="_blank">Registrar Proceso</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </div>
+
+</body>
+</html>
